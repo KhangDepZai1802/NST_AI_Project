@@ -1,0 +1,6 @@
+model_anomaly_path: ''
+model_classifier_path: models/best_CirNET_v2.pth
+model_overlap_path: ''
+model_path: models/best.pt
+normal_count: 46
+tolerance: 1

@@ -1,0 +1,6 @@
+dist/
+*.dll
+*.exe
+*.log
+__pycache__/
+.env

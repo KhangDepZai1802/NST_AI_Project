@@ -108,7 +108,8 @@ if __name__ == "__main__":
 
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
-    app.setWindowIcon(QIcon("assets/logoNST.png"))
+    from src.core.resource_path import rp
+    app.setWindowIcon(QIcon(rp("assets/logoNST.png")))
 
     controller = AppController(app)
     sys.exit(app.exec())

@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 from datetime import datetime
 from PyQt6.QtWidgets import (
-    QMainWindow, QWidget, QHBoxLayout, QVBoxLayout,
+    QMainWindow, QWidget, QHBoxLayout, QVBoxLayout, QPushButton,
     QLabel, QFrame, QFileDialog, QMessageBox,
     QSizePolicy, QTextBrowser, QProgressBar, QTabWidget, QScrollArea,
 )

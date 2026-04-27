@@ -169,8 +169,8 @@ class AnimatedButton(QPushButton):
     _C_BG_HOV    = (113,  50, 245)
     _C_TEXT_HOV  = (255, 255, 255)
     _C_BORDER    = "#7132f5"
-    _STEPS       = 20
-    _INTERVAL_MS = 10
+    _STEPS       = 4
+    _INTERVAL_MS = 3
 
     def __init__(self, text="", parent=None, radius=10, font_size=13, min_h=42):
         super().__init__(text, parent)
@@ -475,7 +475,7 @@ class HomeWindow(QMainWindow):
         logo.setStyleSheet("background:transparent; border:none;")
 
         # Trỏ đường dẫn tới file ảnh của bạn
-        pixmap = QPixmap("assets/logoNST.png") 
+        pixmap = QPixmap(rp("assets/logoNST.png")) 
 
         # Scale ảnh cho vừa vặn với kích thước 34x34 và làm mịn ảnh
         logo.setPixmap(pixmap.scaled(

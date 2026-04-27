@@ -122,9 +122,15 @@ class BloodCancerClassifier:
         return net
 
     def _load_model(self, path: str):
-        if not path or not os.path.isfile(path):
+        if not path:
+            return
+        # Thử path gốc, nếu không tìm thấy thì resolve qua rp() (cho PyInstaller .exe)
+        from src.core.resource_path import rp
+        resolved = path if os.path.isfile(path) else rp(path)
+        if not os.path.isfile(resolved):
             print(f"⚠️ BloodCancerClassifier: Không tìm thấy model: {path}")
             return
+        path = resolved
         try:
             raw = torch.load(path, map_location=self.device, weights_only=False)
 
